@@ -8,6 +8,22 @@ export interface MenuItem {
 export const menuLinks: MenuItem[] = [
   {
     label: "Infinite Scroll",
-    link: "/infinite-scroll",
+    link: "#",
+    children: [
+      {
+        label: "Infinite Scroll With Intersection Observer",
+        link: "/infinite-scroll/just-infinite-scroll",
+      },
+    ],
+  },
+  {
+    label: "Bouncing SVG",
+    link: "#",
+    children: [
+      {
+        label: "animation",
+        link: "/animation/bounce-svg",
+      },
+    ],
   },
 ];

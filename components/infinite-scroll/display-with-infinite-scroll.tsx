@@ -2,21 +2,21 @@
 import { MockDataType } from "@/constants/mock-data";
 import React from "react";
 import Card from "../card";
-import { getMockDataListWithCursorSearch } from "@/app/infinite-scroll/actions";
+import { getMockDataListWithCursorSearch } from "@/app/infinite-scroll/just-infinite-scroll/actions";
 import { MdOutlineSentimentVeryDissatisfied } from "react-icons/md";
 import CardSkeleton from "../card-skeleton";
 
-export interface MockDataListWithInfiniteScrollProps {
+export interface DisplayWithInfiniteScrollProps {
   initialMockDataList: MockDataType[];
   initialCursor: number | null;
   limit: number;
 }
 
-export default function MockDataListWithInfiniteScroll({
+export default function DisplayWithInfiniteScroll({
   initialMockDataList,
   initialCursor,
   limit = 5,
-}: MockDataListWithInfiniteScrollProps) {
+}: DisplayWithInfiniteScrollProps) {
   const [mockDataList, setMockDataList] =
     React.useState<MockDataType[]>(initialMockDataList);
   const [cursor, setCursor] = React.useState<number | null>(initialCursor);

@@ -20,5 +20,3 @@ export const mockDataList: Readonly<MockDataType[]> = Array.from(
       created_at: new Date(),
     })
 );
-
-console.log(mockDataList);

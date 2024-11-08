@@ -5,6 +5,23 @@ export default function Header() {
   return (
     <header className="bg-base-200 text-base-content sticky top-0 z-30 flex h-16 w-full items-center justify-between px-4 backdrop-blur transition-shadow duration-100 shadow-sm bg-opacity-90">
       <div className="flex items-center">
+        <label htmlFor="drawer" className="btn btn-square btn-ghost lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </label>
+
         <Link href="/" className="flex items-center space-x-2">
           <svg
             width="24"
@@ -20,22 +37,6 @@ export default function Header() {
           <span className="font-semibold text-2xl">My Components</span>
         </Link>
       </div>
-      <label htmlFor="drawer" className="btn btn-square btn-ghost lg:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16m-7 6h7"
-          />
-        </svg>
-      </label>
     </header>
   );
 }
