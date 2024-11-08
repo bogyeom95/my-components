@@ -2,6 +2,9 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import type { Metadata } from "next";
+import Header from "@/components/layout/header";
+import Menu from "@/components/layout/menu";
+import { menuLinks } from "@/constants/menu-link";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -25,7 +28,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} `}>{children}</body>
+      <body className={`${roboto.variable} `}>
+        <Header />
+        <div className="drawer lg:drawer-open">
+          <input id="drawer" type="checkbox" className="drawer-toggle" />
+
+          <div className="drawer-content flex flex-col">
+            <main className="flex justify-center min-h-screen bg-black text-white">
+              {children}
+            </main>
+          </div>
+          <Menu links={menuLinks} />
+        </div>
+      </body>
     </html>
   );
 }
