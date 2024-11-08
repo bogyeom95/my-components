@@ -14,14 +14,14 @@ export default function Menu({ links }: MenuProps) {
               <details open>
                 <summary>
                   {/* {item.icon && <span className="mr-2">{item.icon}</span>} */}
-                  {item.label}
+                  <span className="font-semibold">{item.label}</span>
                 </summary>
                 {renderMenu(item.children)}
               </details>
             ) : (
               <a href={item.link}>
                 {/* {item.icon && <span className="mr-2">{item.icon}</span>} */}
-                {item.label}
+                <span className="font-semibold">{item.label}</span>
               </a>
             )}
           </li>
@@ -37,7 +37,7 @@ export default function Menu({ links }: MenuProps) {
         className="drawer-overlay"
         aria-label="Close menu"
       ></label>
-      <aside className="min-h-[calc(100svh-4rem)] w-80 text-base-content space-y-4 bg-base-200 z-1">
+      <aside className="h-full w-80 text-base-content space-y-4 bg-base-200 z-1">
         <ul className="menu px-4 py-0">{renderMenu(links)}</ul>
       </aside>
     </div>
