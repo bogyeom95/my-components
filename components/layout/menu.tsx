@@ -31,13 +31,13 @@ export default function Menu({ links }: MenuProps) {
   };
 
   return (
-    <div className="drawer-side top-16 ">
+    <div className="drawer-side top-16 lg:top-0 h-[calc(100svh-4rem)]">
       <label
         htmlFor="drawer"
         className="drawer-overlay"
         aria-label="Close menu"
       ></label>
-      <aside className="min-h-screen w-80 text-base-content space-y-4 bg-base-100 z-1">
+      <aside className="min-h-[calc(100svh-4rem)] w-80 text-base-content space-y-4 bg-base-200 z-1">
         <ul className="menu px-4 py-0">{renderMenu(links)}</ul>
       </aside>
     </div>

@@ -34,7 +34,7 @@ export default function RootLayout({
           <input id="drawer" type="checkbox" className="drawer-toggle" />
 
           <div className="drawer-content flex flex-col">
-            <main className="flex justify-center min-h-screen bg-black text-white">
+            <main className="min-h-[calc(100svh-4rem)] bg-black">
               {children}
             </main>
           </div>
