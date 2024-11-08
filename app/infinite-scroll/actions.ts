@@ -2,7 +2,7 @@ import { mockDataList, MockDataType } from "@/constants/mock-data";
 
 export async function getMockDataListWithCursorSearch(
   startAfter: number | null,
-  limit: number = 10
+  limit: number = 1
 ): Promise<{ data: MockDataType[]; nextCursor: number | null }> {
   const startIndex = startAfter
     ? mockDataList.findIndex((item) => item.id > startAfter)

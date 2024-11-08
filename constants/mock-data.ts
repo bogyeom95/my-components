@@ -8,9 +8,9 @@ export type MockDataType = {
   created_at: Date;
 };
 
-// 객체 1000개 생성
+// 객체 100개 생성
 export const mockDataList: Readonly<MockDataType[]> = Array.from(
-  { length: 1000 },
+  { length: 100 },
   (_, index) =>
     Object.freeze({
       id: index + 1, // id가 1부터 시작하도록 설정

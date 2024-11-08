@@ -4,15 +4,18 @@ import React from "react";
 import Card from "../card";
 import { getMockDataListWithCursorSearch } from "@/app/infinite-scroll/actions";
 import { MdOutlineSentimentVeryDissatisfied } from "react-icons/md";
+import CardSkeleton from "../card-skeleton";
 
 export interface MockDataListWithInfiniteScrollProps {
   initialMockDataList: MockDataType[];
   initialCursor: number | null;
+  limit: number;
 }
 
 export default function MockDataListWithInfiniteScroll({
   initialMockDataList,
   initialCursor,
+  limit = 5,
 }: MockDataListWithInfiniteScrollProps) {
   const [mockDataList, setMockDataList] =
     React.useState<MockDataType[]>(initialMockDataList);
@@ -43,7 +46,7 @@ export default function MockDataListWithInfiniteScroll({
           // 다음 데이터를 서버에서 받아와 상태를 갱신
           const { data, nextCursor } = await getMockDataListWithCursorSearch(
             cursor,
-            10
+            limit
           );
           setCursor(nextCursor); // 커서 상태 업데이트
           setMockDataList((prev) => [...prev, ...data]); // 기존 데이터에 새 데이터를 추가
@@ -77,7 +80,7 @@ export default function MockDataListWithInfiniteScroll({
         </h1>
       ) : (
         <span ref={trigger} className="w-full flex justify-center">
-          <span className="loading loading-dots loading-md "></span>
+          <CardSkeleton />
         </span>
       )}
     </div>
