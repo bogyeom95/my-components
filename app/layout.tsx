@@ -34,9 +34,7 @@ export default function RootLayout({
           <input id="drawer" type="checkbox" className="drawer-toggle" />
 
           <div className="drawer-content flex flex-col">
-            <main className="h-[calc(100svh-4rem)] overflow-y-auto">
-              {children}
-            </main>
+            <main className="h-[calc(100svh-4rem)]">{children}</main>
           </div>
           <Menu links={menuLinks} />
         </div>
