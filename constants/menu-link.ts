@@ -21,8 +21,12 @@ export const menuLinks: MenuItem[] = [
     link: "#",
     children: [
       {
-        label: "animation",
-        link: "/animation/bounce-svg",
+        label: "bouncing svg v0",
+        link: "/animation/bouncing-svg-v0",
+      },
+      {
+        label: "bouncing svg v1",
+        link: "/animation/bouncing-svg-v1",
       },
     ],
   },

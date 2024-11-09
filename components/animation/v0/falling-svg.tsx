@@ -27,7 +27,7 @@ export default function FallingSVG({
 
     let velocityY = Math.random() * 10;
     const gravity = 0.2;
-    let bounceDampingFactor = 0.85;
+    let bounceDampingFactor = 0.7;
     const minVelocity = 1;
     let animationFrameId: number;
 
@@ -53,7 +53,7 @@ export default function FallingSVG({
       animationFrameId = requestAnimationFrame(animate);
     };
 
-    const delay = Math.random() * 10000;
+    const delay = Math.random() * 5000;
     const timeoutId = setTimeout(() => {
       animationFrameId = requestAnimationFrame(animate);
     }, delay);
