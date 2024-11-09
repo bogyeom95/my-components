@@ -6,20 +6,19 @@ const FallingSVG = forwardRef(function FallingSVG(
   ref: React.Ref<HTMLImageElement>
 ) {
   return (
-    <Image
-      src={svg}
-      alt="svg"
-      width={width}
-      height={height}
+    <div
       ref={ref}
+      className="border-2 rounded-full border-slate-500 overflow-hidden p-2"
       style={{
         position: "absolute",
         left: "0px",
         top: "0px",
-        userSelect: "none",
-        pointerEvents: "none",
+        width: `${width}px`,
+        height: `${height}px`,
       }}
-    />
+    >
+      <Image src={svg} alt="svg" fill className="object-cover" />
+    </div>
   );
 });
 
