@@ -42,6 +42,16 @@ export const menuLinks: MenuItem[] = [
         label: "Fade In",
         link: "/animation/fade-in",
       },
+      {
+        label: "background",
+        link: "#",
+        children: [
+          {
+            label: "v0",
+            link: "/animation/background/v0",
+          },
+        ],
+      },
     ],
   },
 ];
