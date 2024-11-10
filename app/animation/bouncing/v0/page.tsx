@@ -1,4 +1,4 @@
-import FallingSVGList from "@/components/animation/v0/falling-svg-container";
+import FallingSVGList from "@/components/animation/bouncing/v0/falling-svg-container";
 import { svgObjects } from "@/constants/svg-list";
 
 export default function Page() {

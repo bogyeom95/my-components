@@ -34,6 +34,16 @@ export const menuLinks: MenuItem[] = [
           },
         ],
       },
+      {
+        label: "Image Processing With Scroll",
+        link: "#",
+        children: [
+          {
+            label: "v0",
+            link: "/animation/image-processing-with-scroll/v0",
+          },
+        ],
+      },
     ],
   },
 ];
