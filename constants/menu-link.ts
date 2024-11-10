@@ -25,24 +25,22 @@ export const menuLinks: MenuItem[] = [
         link: "#",
         children: [
           {
-            label: "bouncing svg v0",
+            label: "v0",
             link: "/animation/bouncing/v0",
           },
           {
-            label: "bouncing svg v1",
+            label: "v1",
             link: "/animation/bouncing/v1",
           },
         ],
       },
       {
         label: "Image Processing With Scroll",
-        link: "#",
-        children: [
-          {
-            label: "v0",
-            link: "/animation/image-processing-with-scroll/v0",
-          },
-        ],
+        link: "/animation/image-processing-with-scroll",
+      },
+      {
+        label: "Fade In",
+        link: "/animation/fade-in",
       },
     ],
   },

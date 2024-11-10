@@ -13,6 +13,18 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        fadeIn: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(var(--tw-translate-y))",
+          },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        fadeIn: "fadeIn var(--duration) ease-out forwards",
+      },
     },
   },
   plugins: [daisyui],
