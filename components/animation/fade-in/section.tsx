@@ -17,12 +17,12 @@ const container: Variants = {
       delayChildren: 0.15,
     },
   },
-  // hidden: {
-  //   transition: {
-  //     staggerChildren: 0.15,
-  //     delayChildren: 0.15,
-  //   },
-  // },
+  hidden: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.15,
+    },
+  },
 };
 
 export default function Section({
@@ -36,13 +36,12 @@ export default function Section({
   return (
     <motion.section
       ref={ref}
-      animate={inView ? { opacity: 1 } : { opacity: 0 }}
+      animate={inView ? "visible" : "hidden"}
       variants={container}
-      initial="hidden"
     >
       <div className="flex flex-col items-center border-2 m-4">
         <FadeIn distance={20}>
-          <h3 className="text-2xl font-semibold text-center ">{title}</h3>
+          <h3 className="text-2xl font-semibold text-center">{title}</h3>
         </FadeIn>
         <FadeIn distance={20}>
           <p className="text-base text-center mt-10">{description}</p>
