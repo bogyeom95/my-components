@@ -62,6 +62,16 @@ export const menuLinks: MenuItem[] = [
         label: "v0",
         link: "/dnd/v0",
       },
+      {
+        label: "with motion",
+        link: "#",
+        children: [
+          {
+            label: "v0",
+            link: "/dnd/with-motion/v0",
+          },
+        ],
+      },
     ],
   },
 ];
