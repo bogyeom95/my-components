@@ -54,4 +54,14 @@ export const menuLinks: MenuItem[] = [
       },
     ],
   },
+  {
+    label: "dnd",
+    link: "#",
+    children: [
+      {
+        label: "v0",
+        link: "/dnd/v0",
+      },
+    ],
+  },
 ];
