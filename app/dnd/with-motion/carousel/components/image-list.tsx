@@ -61,9 +61,9 @@ export default function ImageList({ images }: { images: string[] }) {
               const swipe = swipePower(offset.x, velocity.x);
 
               if (swipe < -swipeConfidenceThreshold) {
-                paginate(-1);
-              } else if (swipe > swipeConfidenceThreshold) {
                 paginate(1);
+              } else if (swipe > swipeConfidenceThreshold) {
+                paginate(-1);
               }
             }}
             className=" object-cover bg-white"
