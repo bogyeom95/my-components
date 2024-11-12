@@ -67,12 +67,22 @@ export const menuLinks: MenuItem[] = [
         link: "#",
         children: [
           {
-            label: "v0",
-            link: "/dnd/with-motion/v0",
+            label: "simple drag",
+            link: "/dnd/with-motion/simple-drag",
           },
           {
             label: "carousel",
             link: "/dnd/with-motion/carousel",
+          },
+          {
+            label: "reorder",
+            link: "#",
+            children: [
+              {
+                label: "v0",
+                link: "/dnd/with-motion/reorder/v0",
+              },
+            ],
           },
         ],
       },
