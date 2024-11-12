@@ -1,4 +1,4 @@
-import ScrollEffectBackgound from "@/components/animation/image-processing-with-scroll/scroll-effect-background";
+import ScrollEffectBackgound from "./components/scroll-effect-background";
 
 export default async function page() {
   return (

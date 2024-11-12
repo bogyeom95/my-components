@@ -1,4 +1,4 @@
-import DragWithMotion from "./drag-with-motion";
+import DragWithMotion from "./components/drag-with-motion";
 
 export default function page() {
   return (

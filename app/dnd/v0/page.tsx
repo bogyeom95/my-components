@@ -1,4 +1,4 @@
-import DragWithBoundary from "./drag-with-boundary";
+import DragWithBoundary from "./components/drag-with-boundary";
 
 export default function page() {
   return (

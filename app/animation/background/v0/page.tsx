@@ -1,5 +1,5 @@
-import StarBackground from "@/components/background/StarBackground";
-import Counter from "@/components/counter";
+import StarBackground from "./components/StarBackground";
+import Counter from "./components/counter";
 
 export default function page() {
   return (

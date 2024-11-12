@@ -1,10 +1,10 @@
 "use client";
 import { MockDataType } from "@/constants/mock-data";
 import React from "react";
-import Card from "../card";
+import Card from "../../../../components/card";
 import { getMockDataListWithCursorSearch } from "@/app/infinite-scroll/just-infinite-scroll/actions";
 import { MdOutlineSentimentVeryDissatisfied } from "react-icons/md";
-import CardSkeleton from "../card-skeleton";
+import CardSkeleton from "../../../../components/card-skeleton";
 
 export interface DisplayWithInfiniteScrollProps {
   initialMockDataList: MockDataType[];

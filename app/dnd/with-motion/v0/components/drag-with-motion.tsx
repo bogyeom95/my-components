@@ -15,7 +15,7 @@ export default function DragWithMotion() {
   useEffect(() => {
     if (containerRef.current) {
       const containerRect = containerRef.current.getBoundingClientRect();
-      const MARGIN = 8;
+      const MARGIN = 0;
       setConstraints({
         top: 0 + MARGIN,
         left: 0 + MARGIN,

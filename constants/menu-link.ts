@@ -70,6 +70,10 @@ export const menuLinks: MenuItem[] = [
             label: "v0",
             link: "/dnd/with-motion/v0",
           },
+          {
+            label: "carousel",
+            link: "/dnd/with-motion/carousel",
+          },
         ],
       },
     ],

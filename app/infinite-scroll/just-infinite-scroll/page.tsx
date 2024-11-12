@@ -1,4 +1,4 @@
-import DisplayWithInfiniteScroll from "@/components/infinite-scroll/display-with-infinite-scroll";
+import DisplayWithInfiniteScroll from "./components/display-with-infinite-scroll";
 import { getMockDataListWithCursorSearch } from "./actions";
 
 export default async function InfiniteScrollShowPage() {

@@ -1,4 +1,4 @@
-import Section from "@/components/animation/fade-in/section";
+import Section from "./components/section";
 import { mockDataList } from "@/constants/mock-data";
 
 export default async function page() {
