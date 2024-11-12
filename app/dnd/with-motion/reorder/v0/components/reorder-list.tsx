@@ -9,7 +9,7 @@ export default function ReorderList({ svgs }: { svgs: SvgObject[] }) {
   const [items, setItems] = React.useState(svgs);
 
   return (
-    <div className="bg-orange-300 h-[calc(100svh-4rem)] overflow-y-auto">
+    <div className="bg-orange-300 h-[calc(100svh-4rem)] overflow-y-auto rounded-sm">
       <Reorder.Group axis="y" values={items} onReorder={setItems}>
         {items.map((item) => (
           <Item key={item.id} item={item} />

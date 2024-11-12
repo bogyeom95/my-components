@@ -82,6 +82,11 @@ export const menuLinks: MenuItem[] = [
                 label: "v0",
                 link: "/dnd/with-motion/reorder/v0",
               },
+
+              {
+                label: "v1",
+                link: "/dnd/with-motion/reorder/v1",
+              },
             ],
           },
         ],
