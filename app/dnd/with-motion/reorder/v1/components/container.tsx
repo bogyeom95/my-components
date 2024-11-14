@@ -139,13 +139,19 @@ const Column = ({
   };
 
   const getNearestIndicator = (e: DragEvent, indicators: HTMLElement[]) => {
+    console.log(e.clientY);
     const DISTANCE_OFFSET = 50;
+
+    const calculateOffset = (elelemt: HTMLElement) => {
+      const box = elelemt.getBoundingClientRect();
+      return e.clientY - (box.top + DISTANCE_OFFSET);
+    };
 
     const el = indicators.reduce(
       (closest, child) => {
-        const box = child.getBoundingClientRect();
+        // const box = child.getBoundingClientRect();
 
-        const offset = e.clientY - (box.top + DISTANCE_OFFSET);
+        const offset = calculateOffset(child);
 
         if (offset < 0 && offset > closest.offset) {
           return { offset: offset, element: child };
@@ -158,7 +164,6 @@ const Column = ({
         element: indicators[indicators.length - 1],
       }
     );
-
     return el;
   };
 
@@ -203,7 +208,7 @@ const Column = ({
 };
 
 type ItemProps = KanbanSvgObject & {
-  handleDragStart: Function;
+  handleDragStart: (e: DragEvent, item: KanbanSvgObject) => void;
 };
 
 const Item = ({ name, id, column, svg, handleDragStart }: ItemProps) => {
@@ -214,6 +219,7 @@ const Item = ({ name, id, column, svg, handleDragStart }: ItemProps) => {
         layout
         layoutId={String(id)}
         draggable="true"
+        // @ts-expect-error - draggable is a valid attribute
         onDragStart={(e) => handleDragStart(e, { id })}
         className="cursor-grab    active:cursor-grabbing"
       >

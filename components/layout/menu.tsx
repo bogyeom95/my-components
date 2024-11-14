@@ -31,7 +31,7 @@ export default function Menu({ links }: MenuProps) {
   };
 
   return (
-    <div className="drawer-side top-16 lg:top-0 h-[calc(100svh-4rem)]">
+    <div className="drawer-side top-16 lg:top-0 h-[calc(100svh-4rem)] overflow-y-auto  bg-base-200">
       <label
         htmlFor="drawer"
         className="drawer-overlay"

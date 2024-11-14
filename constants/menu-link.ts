@@ -93,4 +93,20 @@ export const menuLinks: MenuItem[] = [
       },
     ],
   },
+  {
+    label: "layout",
+    link: "#",
+    children: [
+      {
+        label: "with mosaic",
+        link: "#",
+        children: [
+          {
+            label: "v0",
+            link: "/layout/with-mosaic/v0",
+          },
+        ],
+      },
+    ],
+  },
 ];
