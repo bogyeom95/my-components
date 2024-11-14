@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "^9.2.0",
+    "@gsap/react": "^2.1.1",
     "@react-three/drei": "^9.115.0",
     "@react-three/fiber": "^9.0.0-alpha.8",
     "@types/styled-components": "^5.1.34",
