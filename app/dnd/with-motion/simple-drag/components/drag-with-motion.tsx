@@ -32,7 +32,7 @@ export default function DragWithMotion() {
       </div>
       <div
         ref={containerRef}
-        className="w-4/5 h-96 bg-slate-100 relative overflow-hidden"
+        className="w-4/5 h-96 bg-base-300 relative overflow-hidden"
       >
         <motion.div
           className="h-24 w-24 absolute bg-white cursor-move rounded-xl shadow-xl"

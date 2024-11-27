@@ -15,7 +15,7 @@ export interface DisplayWithInfiniteScrollProps {
 export default function DisplayWithInfiniteScroll({
   initialMockDataList,
   initialCursor,
-  limit = 5,
+  limit = 1,
 }: DisplayWithInfiniteScrollProps) {
   const [mockDataList, setMockDataList] =
     React.useState<MockDataType[]>(initialMockDataList);

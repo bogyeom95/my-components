@@ -6,7 +6,7 @@ export default function page() {
     <div className="h-full">
       <StarBackground />
       <div className="text-4xl text-white font-semibold w-full h-full flex items-center justify-center">
-        <Counter from={0} to={10000000000000} duration={5} />
+        <Counter from={0} to={100000} duration={5} />
       </div>
     </div>
   );

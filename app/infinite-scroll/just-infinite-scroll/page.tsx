@@ -2,7 +2,7 @@ import DisplayWithInfiniteScroll from "./components/display-with-infinite-scroll
 import { getMockDataListWithCursorSearch } from "./actions";
 
 export default async function InfiniteScrollShowPage() {
-  const limit = 5;
+  const limit = 1;
   const { data, nextCursor } = await getMockDataListWithCursorSearch(
     null,
     limit

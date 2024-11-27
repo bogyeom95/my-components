@@ -94,7 +94,7 @@ function Tile({ id, path, onRemove }: TileProps) {
       path={path}
       createNode={createNode}
       renderToolbar={(props) => (
-        <div className="flex items-center bg-gray-100 p-2 border-b border-gray-200 w-full">
+        <div className="flex items-center bg-base-100 p-2 border-b border-base-200 w-full">
           <span className="flex-grow text-sm font-semibold text-gray-800">
             {props.title}
           </span>
@@ -120,7 +120,7 @@ type BoxProps = {
 
 function Box({ id }: BoxProps) {
   return (
-    <div className=" bg-white w-full h-full">
+    <div className=" bg-base-100 w-full h-full">
       <h2 className="text-4xl">{`Content Area ${id}`}</h2>
     </div>
   );

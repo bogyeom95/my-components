@@ -195,7 +195,7 @@ const Column = ({
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         className={`h-full w-full transition-colors ${
-          active ? "bg-neutral-200" : ""
+          active ? "bg-base-300" : ""
         }`}
       >
         {filteredItems.map((c) => {
@@ -223,7 +223,7 @@ const Item = ({ name, id, column, svg, handleDragStart }: ItemProps) => {
         onDragStart={(e) => handleDragStart(e, { id })}
         className="cursor-grab    active:cursor-grabbing"
       >
-        <div className="flex mx-1  w-40 items-center justify-between p-2 border rounded-lg shadow-md bg-white">
+        <div className="flex mx-1  w-40 items-center justify-between p-2 border rounded-lg shadow-md bg-base-300">
           <div className="flex items-center *:select-none">
             <div className="w-8 h-8 relative mr-2 ">
               <Image

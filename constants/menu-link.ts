@@ -7,22 +7,6 @@ export interface MenuItem {
 
 export const menuLinks: MenuItem[] = [
   {
-    label: "gsap",
-    link: "#",
-    children: [
-      {
-        label: "basic",
-        link: "#",
-        children: [
-          {
-            label: "v0",
-            link: "/gsap/basic/v0",
-          },
-        ],
-      },
-    ],
-  },
-  {
     label: "Infinite Scroll",
     link: "#",
     children: [
