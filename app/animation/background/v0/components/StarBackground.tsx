@@ -8,14 +8,21 @@ type Star = {
   speedX: number;
   speedY: number;
 };
+function debounce<
+  T extends (
+    this: unknown,
+    ...args: any[] // eslint-disable-line
+  ) => void,
+>(callback: T, limit: number = 100) {
+  let timeout: ReturnType<typeof setTimeout>;
 
-const debounce = (func: Function, delay: number) => {
-  let timeoutId: NodeJS.Timeout;
-  return (...args: any[]) => {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => func(...args), delay);
+  return function (this: ThisParameterType<T>, ...args: Parameters<T>): void {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      callback.apply(this, args);
+    }, limit);
   };
-};
+}
 
 const initializeStars = (width: number, height: number): Star[] => {
   const canvasSize = width + height;
